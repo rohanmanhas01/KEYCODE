@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: black;
+        }
+
+        .class {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60vh;
+            font-size: xx-large;
+            color: aliceblue;
+        }
+       
+    </style>
+</head>
+
+<body>
+    <div class="class">
+        <div id="insert">
+            <h1>PRESS THE KEY TO SEE MAGIC</h1>
+        </div>
+    </div>
+    <script>
+
+        let ins = document.querySelector("#insert")
+        window.addEventListener("keydown", (e) => {
+            ins.innerHTML = `
+                <table border="2">
+                    <tr>
+                        <th>KEY</th>
+                        <th>KEYCODE</th>
+                        <th>CODE</th>
+                        </tr>
+                        <tr>
+                            <td>${e.key === " " ? "Space" : e.key}</td>
+                            <td>${e.keyCode}</td>
+                            <td>${e.code}</td>
+                            </tr>
+                          
+                                </table>`
+
+        })
+    </script>
+</body>
+
+</html>
